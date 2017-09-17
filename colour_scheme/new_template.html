@@ -1,0 +1,43 @@
+<pre style="background:#000000;color:#c0c0c0"><span style="color:#808000">import</span> os
+
+<span style="color:#808000">from</span> src.data_utils <span style="color:#808000">import</span> note_data
+<span style="color:#808000">from</span> src.note_utils <span style="color:#808000">import</span> (
+    save_note,
+    view_note,
+    list_notes,
+    delete_note,
+    edit_note,
+)
+
+
+Stone_Data <span style="color:#808000">=</span> {
+    <span style="color:#800000">'sandstone'</span></span>: {
+        <span style="color:#800000">'strength'</span>: <span style="color:#ff00ff">10</span>,
+        <span style="color:#800000">'value'</span>: <span style="color:#ff00ff">5</span>,
+        <span style="color:#800000">'weight'</span>: <span style="color:#ff00ff">10</span>,
+        <span style="color:#800000">'rarity'</span>: <span style="color:#ff00ff">5</span>
+    }
+}
+
+
+<span style="color:#cf6a4c">def</span> <span style="color:#cf6a4c">main</span>(action, note, filter_tags):
+    whole_foolscap <span style="color:#808000">=</span> note_data()
+    
+    <span style="color:#cf6a4c">if</span> action <span style="color:#808000">==</span> <span style="color:#800000">'save'</span> <span style="color:#cf6a4c">or</span> action <span style="color:#808000">==</span> <span style="color:#800000">'-s'</span>:
+        notepad <span style="color:#808000">=</span> save_note(note, whole_foolscap)
+
+        
+    <span style="color:#cf6a4c">if</span> action <span style="color:#808000">==</span> <span style="color:#800000">'view'</span> <span style="color:#cf6a4c">or</span> action <span style="color:#808000">==</span> <span style="color:#800000">'-v'</span>:
+        view_note(note, whole_foolscap)
+
+        
+<span style="color:#cf6a4c">class</span> <span style="color:#d80a52">SinglePoint</span>:
+    <span style="color:#cf6a4c">def</span> <span style="color:#cf6a4c"><span style="color:#cf6a4c">__init__</span></span>(self, tree<span style="color:#808000">=</span><span style="color:#cf6a4c">None</span>):
+        <span style="color:#666666">""" Here is a single point """</span>
+        <span style="color:#008000"># Horizontal and Vertical Size of Structure</span>
+        h<span style="color:#808000"> = </span><span style="color:#ff00ff">1</span>
+        v<span style="color:#808000"> = </span><span style="color:#ff00ff">1</span>
+        max_x<span style="color:#808000"> = </span>DEFAULT_GRID_X <span style="color:#808000">-</span> h <span style="color:#808000">-</span> <span style="color:#ff00ff">1</span>
+        max_y<span style="color:#808000"> = </span>DEFAULT_GRID_Y <span style="color:#808000">-</span> v <span style="color:#808000">-</span> <span style="color:#ff00ff">1
+        
+</span>

@@ -1,0 +1,43 @@
+<pre style="background:{background};color:{global_text}"><span style="color:{operational}">import</span> os
+
+<span style="color:{operational}">from</span> src.data_utils <span style="color:{operational}">import</span> note_data
+<span style="color:{operational}">from</span> src.note_utils <span style="color:{operational}">import</span> (
+    save_note,
+    view_note,
+    list_notes,
+    delete_note,
+    edit_note,
+)
+
+
+Stone_Data <span style="color:{operator}">=</span> {{
+    <span style="color:{strings}">'sandstone'</span></span>: {{
+        <span style="color:{strings}">'strength'</span>: <span style="color:{ints}">10</span>,
+        <span style="color:{strings}">'value'</span>: <span style="color:{ints}">5</span>,
+        <span style="color:{strings}">'weight'</span>: <span style="color:{ints}">10</span>,
+        <span style="color:{strings}">'rarity'</span>: <span style="color:{ints}">5</span>
+    }}
+}}
+
+
+<span style="color:{key_words}">def</span> <span style="color:{def_functions}">main</span>(action, note, filter_tags):
+    whole_foolscap <span style="color:{operator}">=</span> note_data()
+    
+    <span style="color:{key_words}">if</span> action <span style="color:{operator}">==</span> <span style="color:{strings}">'save'</span> <span style="color:{key_words}">or</span> action <span style="color:{operator}">==</span> <span style="color:{strings}">'-s'</span>:
+        notepad <span style="color:{operator}">=</span> save_note(note, whole_foolscap)
+
+        
+    <span style="color:{key_words}">if</span> action <span style="color:{operator}">==</span> <span style="color:{strings}">'view'</span> <span style="color:{key_words}">or</span> action <span style="color:{operator}">==</span> <span style="color:{strings}">'-v'</span>:
+        view_note(note, whole_foolscap)
+
+        
+<span style="color:{key_words}">class</span> <span style="color:{class_colour}">SinglePoint</span>:
+    <span style="color:{key_words}">def</span> <span style="color:{def_functions}"><span style="color:{def_functions}">__init__</span></span>(self, tree<span style="color:{operator}">=</span><span style="color:{key_words}">None</span>):
+        <span style="color:{doc_strings}">""" Here is a single point """</span>
+        <span style="color:{comments}"># Horizontal and Vertical Size of Structure</span>
+        h<span style="color:{operator}"> = </span><span style="color:{ints}">1</span>
+        v<span style="color:{operator}"> = </span><span style="color:{ints}">1</span>
+        max_x<span style="color:{operator}"> = </span>DEFAULT_GRID_X <span style="color:{operator}">-</span> h <span style="color:{operator}">-</span> <span style="color:{ints}">1</span>
+        max_y<span style="color:{operator}"> = </span>DEFAULT_GRID_Y <span style="color:{operator}">-</span> v <span style="color:{operator}">-</span> <span style="color:{ints}">1
+        
+</span>

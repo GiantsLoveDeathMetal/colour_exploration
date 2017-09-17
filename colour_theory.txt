@@ -1,0 +1,13 @@
+
+# colour_theory
+====================
+: Notes on colour theory.
+
+Triadic colors: 
+Rotate by +- 120 degrees
+
+let n = 120 // 120 degrees as an example
+hue = fmod(hue + CGFloat(n)/360.0, 1.0)
+
+{colour} {code}
+====================
